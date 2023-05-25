@@ -11,7 +11,17 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        platform: [macos-latest, ubuntu-latest, windows-latest]
+        settings:
+          - platform: 'macos-latest'
+            args: '--target x86_64-apple-darwin'    # Intel-based
+          - platform: 'macos-latest'
+            args: '--target aarch64-apple-darwin'   # Apple Silicon
+          - platform: 'ubuntu-20.04'
+            args: ''
+          - platform: 'windows-latest'
+            args: '--target x86_64-pc-windows-msvc' # 64-bit
+          - platform: 'windows-latest'
+            args: '--target i686-pc-windows-msvc'   # 32-bit
 
     runs-on: ${{ matrix.platform }}
     steps:
