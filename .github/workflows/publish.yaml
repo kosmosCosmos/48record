@@ -36,6 +36,7 @@ jobs:
         with:
           tagName: v__VERSION__ # the action automatically replaces \_\_VERSION\_\_ with the app version
           releaseName: "v__VERSION__"
-          releaseBody: "See the assets to download this version and install."
-          releaseDraft: true  # 不需要 draft 的可以改成 false
+          releaseBody: "CHANGELOG
+          更改了获取数据的方式"
+          releaseDraft: false  # 不需要 draft 的可以改成 false
           prerelease: false
