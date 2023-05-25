@@ -34,8 +34,8 @@ jobs:
         uses: softprops/action-gh-release@v1
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
-          name: v${{ GITHUB_REF#refs/*/ }}
-          tag_name: v${{ GITHUB_REF#refs/*/ }}
+          name: ${{ GITHUB_REF#refs/*/ }}
+          tag_name: ${{ GITHUB_REF#refs/*/ }}
           draft: true
           prerelease: true
           files: |
