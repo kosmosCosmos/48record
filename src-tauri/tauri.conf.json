@@ -24,7 +24,7 @@
         "icons/icon.ico"
       ],
       "identifier": "com.brandweeks.record",
-      "targets": "all"
+      "targets":  ["deb","nsis","app"]
     },
     "security": {
       "csp": null
