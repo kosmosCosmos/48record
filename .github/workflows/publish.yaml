@@ -39,6 +39,7 @@ jobs:
 
   # 编译 Tauri
   build-tauri:
+    permissions: write-all
     needs: create-release
     strategy:
       fail-fast: false
