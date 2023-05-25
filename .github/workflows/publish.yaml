@@ -34,11 +34,11 @@ jobs:
         uses: softprops/action-gh-release@v1
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
-          name: v${{ env.VERSION }}
-          tag_name: v${{ env.VERSION }}
+          name: v${{ GITHUB_REF#refs/*/ }}
+          tag_name: v${{ GITHUB_REF#refs/*/ }}
           draft: true
           prerelease: true
           files: |
-            D:\a\48record\48record\src-tauri\target\release\bundle\msi\48records_${GITHUB_REF#refs/*/}_x64_en-US.msi
-            /home/runner/work/48record/48record/src-tauri/target/release/bundle/deb/48records_${GITHUB_REF#refs/*/}_amd64.deb
+            D:\a\48record\48record\src-tauri\target\release\bundle\msi\48records_${{GITHUB_REF#refs/*/}}_x64_en-US.msi
+            /home/runner/work/48record/48record/src-tauri/target/release/bundle/deb/48records_${{GITHUB_REF#refs/*/}}_amd64.deb
             /Users/runner/work/48record/48record/src-tauri/target/release/bundle/macos/48records.app
